@@ -1,6 +1,6 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import React from "react";
-import Colors from "../utils/colors";
+import Colors from "../../utils/colors";
 
 interface IProps {
   children: React.ReactNode;
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
     textAlign: "center",
+    fontFamily: "roboto",
   },
   pressed: {
     opacity: 0.75,

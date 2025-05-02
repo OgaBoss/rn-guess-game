@@ -13,7 +13,9 @@ describe("InstructionText", () => {
   });
 
   test("applies default styles correctly", () => {
-    const { toJSON } = render(<InstructionText>Test Instruction</InstructionText>);
+    const { toJSON } = render(
+      <InstructionText>Test Instruction</InstructionText>,
+    );
 
     // Get the component tree
     const tree = toJSON();
@@ -29,7 +31,7 @@ describe("InstructionText", () => {
   test("applies custom styles correctly", () => {
     const customStyle = { fontWeight: "bold", marginTop: 10 };
     const { toJSON } = render(
-      <InstructionText style={customStyle}>Test Instruction</InstructionText>
+      <InstructionText style={customStyle}>Test Instruction</InstructionText>,
     );
 
     // Get the component tree
@@ -45,7 +47,9 @@ describe("InstructionText", () => {
   });
 
   test("renders different text content correctly", () => {
-    const { rerender } = render(<InstructionText>First Instruction</InstructionText>);
+    const { rerender } = render(
+      <InstructionText>First Instruction</InstructionText>,
+    );
     expect(screen.getByText("First Instruction")).toBeTruthy();
 
     rerender(<InstructionText>Second Instruction</InstructionText>);
